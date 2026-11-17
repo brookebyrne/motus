@@ -1,0 +1,2 @@
+asset_id,relative_path,asset_type,sha256,source_url_or_receipt,license_name,license_evidence_path,render_permission,ml_training_permission,derived_label_permission,redistribution_permission,employer_environment_permission,status,notes
+,,,,,,,,,,,,unverified,Populate one row per mesh rig animation texture or reference source; use unknown rather than assuming permission

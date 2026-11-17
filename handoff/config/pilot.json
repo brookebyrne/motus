@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "purpose": "synthetic_camera_measurement_feasibility",
+  "run_id": "pilot-001",
+  "seed": 1701,
+  "asset": {
+    "path": null,
+    "asset_id": null,
+    "license_status": "unverified",
+    "rig_status": "unknown",
+    "motion_source": null,
+    "scale_status": "unverified",
+    "meters_per_scene_unit": null,
+    "landmark_mapping": null
+  },
+  "motion": {
+    "gait": "trot_intended_not_validated",
+    "mode": "in_place_pilot",
+    "duration_seconds": 4,
+    "warmup_seconds": 1,
+    "stride_frequency_hz": 1.5,
+    "speed_m_per_second": null,
+    "injected_change": "none",
+    "parameter_basis": "illustrative_engineering_assumptions"
+  },
+  "render": {
+    "engine": "select_after_capability_audit",
+    "width_px": 640,
+    "height_px": 360,
+    "fps_numerator": 60,
+    "fps_denominator": 1,
+    "frame_count": 240,
+    "motion_blur": false,
+    "lens_distortion": "none",
+    "shutter_model": "global_instantaneous",
+    "output_frames": "png",
+    "preview_video": "h264_yuv420p",
+    "color_management": "record_resolved_settings"
+  },
+  "cameras": [
+    {
+      "camera_id": "rear_baseline",
+      "placement": "resolve_from_verified_asset_bounds",
+      "view": "rear_oblique",
+      "azimuth_offset_degrees": 10,
+      "elevation_degrees": 5,
+      "roll_degrees": 0,
+      "focal_length_mm": 50,
+      "sensor_width_mm": 36,
+      "sensor_fit": "HORIZONTAL",
+      "keep_entire_horse_in_frame": true
+    }
+  ],
+  "reference": {
+    "world_up_axis": "+Z",
+    "heading_axis": "+X",
+    "horse_left_axis": "+Y",
+    "time_origin": "first_retained_frame",
+    "required_landmarks": ["poll", "withers", "sacrum", "left_tuber_coxae", "right_tuber_coxae", "left_fore_hoof", "right_fore_hoof", "left_hind_hoof", "right_hind_hoof"],
+    "export_clean_video": true,
+    "export_diagnostic_overlay": true,
+    "export_occlusion": true,
+    "export_stride_events": true,
+    "export_virtual_imu": false
+  },
+  "quality": {
+    "projection_max_error_px": 0.5,
+    "timestamp_max_error_frame_fraction": 0.01,
+    "duration_tolerance_frames": 1,
+    "reference_repeatability_max_relative_error": 0.000001,
+    "clinical_threshold": null
+  },
+  "execution": {
+    "dry_run_first": true,
+    "pilot_only": true,
+    "max_output_gib": 5,
+    "device": "auto_with_cpu_fallback"
+  }
+}
